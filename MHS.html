@@ -10,7 +10,7 @@
 		<meta name="keywords" content="">
 		<meta name="theme-color" content="#272727">
 
-		<title>Kim Kardashian VS Taylor Swift</title>
+		<title>MIT VS Harvard VS Stanford</title>
 
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -60,7 +60,7 @@
 				<section>
 					<div class="container">
 						<div class="page-title text-center">
-							<h1>Kim Kardashian vs Taylor Swift</h1>
+							<h1>MIT VS Harvard VS Stanford</h1>
 							<p>Mentions in the Gaurdian  1999 - 2017</p>
 						</div>
 					</div>
@@ -96,13 +96,13 @@
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<script src="./metricsgraphics.js"></script>
 		<script>
-			d3.json('./KT.json', function(data) {
+			d3.json('./MHS.json', function(data) {
 			    for (var i = 0; i < data.length; i++) {
 			        data[i] = MG.convert.date(data[i], 'date');
 			    }
 
 			    MG.data_graphic({
-			        title: "Kim Kardashian Shading Taylor Swift",
+			        title: "MIT VS Harvard VS Stanford",
 			        description: "This chart shows the popularity of each artist based on the number of times they are mentioned in The Gaurdian from 1999 - 2017. As their feuds escalated we look at who's shade carried the most weight at the time they feuded.",
 			        data: data,
 			        width: 1410,
