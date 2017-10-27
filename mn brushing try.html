@@ -10,7 +10,7 @@
 		<meta name="keywords" content="">
 		<meta name="theme-color" content="#272727">
 
-		<title>Mariah Carey vs Nicki Minaj</title>
+		<title>Hillary Clinton vs Donald Trump</title>
 
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -95,6 +95,8 @@
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<script src="./metricsgraphics.js"></script>
+		<script src='js/addons/mg_line_brushing.js'></script>
+		<link rel='stylesheet' href='css/addons/mg_line_brushing.css' />
 		<script>
 			d3.json('./mn.json', function(data) {
 			    for (var i = 0; i < data.length; i++) {
@@ -108,11 +110,38 @@
 			        width: 1410,
 			        height: 500,
 			        right: 40,
-			        target: '#dataviz',
+			        target: '#dataviz', 
 			        legend: ['Line 1','Line 2','Line 3'],
-			        legend_target: '.legend'
+			        legend_target: '.legend',
 			    });
 			});
+			</script>
+			<script>
+					d3.json('data/some_percentage.json', function(data) {
+    for (var i = 0; i < data.length; i++) {
+        data[i] = MG.convert.date(data[i], 'date');
+    }
+
+    var markers = [{
+        'date': new Date('2014-02-01T00:00:00.000Z'),
+        'label': '1st Milestone'
+    }, {
+        'date': new Date('2014-03-15T00:00:00.000Z'),
+        'label': '2nd Milestone'
+    }];
+
+    MG.data_graphic({
+        title: "Markers",
+        description: "Markers are vertical lines that can be added at arbitrary points. Markers that are close to each other won't collide.",
+        data: data,
+        width: 600,
+        height: 200,
+        right: 40,
+        markers: markers,
+        format: 'percentage',
+        target: '#markers'
+    });
+});
 		</script>
 
 	</body>

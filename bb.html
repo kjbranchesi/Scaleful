@@ -10,7 +10,7 @@
 		<meta name="keywords" content="">
 		<meta name="theme-color" content="#272727">
 
-		<title>Mariah Carey vs Nicki Minaj</title>
+		<title>Justin Bieber VS A Bucket</title>
 
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -60,7 +60,7 @@
 				<section>
 					<div class="container">
 						<div class="page-title text-center">
-							<h1>Mariah Carey vs nicki minaj</h1>
+							<h1>Justin Bieber vs A Bucket</h1>
 							<p>Mentions in the Gaurdian  1999 - 2017</p>
 						</div>
 					</div>
@@ -95,24 +95,28 @@
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<script src="./metricsgraphics.js"></script>
+		<script src='js/addons/mg_line_brushing.js'></script>
+		<link rel='stylesheet' href='css/addons/mg_line_brushing.css' />
 		<script>
-			d3.json('./mn.json', function(data) {
+			d3.json('./bb.json', function(data) {
 			    for (var i = 0; i < data.length; i++) {
 			        data[i] = MG.convert.date(data[i], 'date');
 			    }
 
 			    MG.data_graphic({
-			        title: "Mariah Carey Shading Nicki Minaj",
-			        description: "This chart shows the popularity of each artist based on the number of times they are mentioned in The Gaurdian from 1999 - 2017. As their feuds escalated we look at who's shade carried the most weight at the time they feuded.",
+			        title: "Justin Bieber vs A Bucket",
+			        description: "This chart shows the popularity of each politician based on the number of times they are mentioned in The Gaurdian from 1999 - 2017. As their campaigns escalated we look at who's shade carried the most weight at the time they feuded.",
 			        data: data,
 			        width: 1410,
 			        height: 500,
 			        right: 40,
 			        target: '#dataviz',
 			        legend: ['Line 1','Line 2','Line 3'],
-			        legend_target: '.legend'
+			        legend_target: '.legend',
 			    });
 			});
+
+
 		</script>
 
 	</body>

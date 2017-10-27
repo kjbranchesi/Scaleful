@@ -10,7 +10,7 @@
 		<meta name="keywords" content="">
 		<meta name="theme-color" content="#272727">
 
-		<title>Mariah Carey vs Nicki Minaj</title>
+		<title>Hillary Clinton vs Donald Trump</title>
 
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -45,7 +45,7 @@
 						<div class="container">
 							<div class="logo">
 								<a href="index.html" class="animsition-link">
-									<span>&#10144;</a>
+									<span>Who Can Throw The Most Shade?</a>
 							</div>
 
 							<!-- END PRIMARY-MENU -->
@@ -96,17 +96,17 @@
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<script src="./metricsgraphics.js"></script>
 		<script>
-			d3.json('./mn.json', function(data) {
+			d3.json('./fake_users2.json', function(data) {
 			    for (var i = 0; i < data.length; i++) {
 			        data[i] = MG.convert.date(data[i], 'date');
 			    }
 
 			    MG.data_graphic({
-			        title: "Mariah Carey Shading Nicki Minaj",
-			        description: "This chart shows the popularity of each artist based on the number of times they are mentioned in The Gaurdian from 1999 - 2017. As their feuds escalated we look at who's shade carried the most weight at the time they feuded.",
+			        title: "Multi-Line Chart",
+			        description: "This line chart contains multiple lines.",
 			        data: data,
-			        width: 1410,
-			        height: 500,
+			        width: 1600,
+			        height: 600,
 			        right: 40,
 			        target: '#dataviz',
 			        legend: ['Line 1','Line 2','Line 3'],
